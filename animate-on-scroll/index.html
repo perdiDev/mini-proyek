@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate on Scroll</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .show {
+            @apply opacity-100 translate-x-0 translate-y-0 skew-x-0 backdrop-blur-none scale-x-100
+          }
+        }
+    </style>
+    <script defer src="./app.js"></script>
+</head>
+<body class="scroll-smooth">
+    <nav>
+        <div class="text-center py-8 bg-blue-500">
+            <p class="text-white font-bold text-2xl">AOS</p>
+        </div>
+    </nav>
+
+    <section class="h-screen w-full overflow-x-hidden bg-yellow-500 grid place-items-center">
+        <div class="aos translate-x-full opacity-0 skew-x-3 transition-all duration-700 delay-100 w-44 h-44 bg-slate-900 rounded-lg text-center text-white py-2">Box 1</div>
+    </section>
+    <section class="h-screen w-full overflow-x-hidden bg-emerald-500 grid place-items-center">
+        <div class="aos translate-y-full opacity-0 skew-x-3 transition-all duration-300 w-44 h-44 bg-slate-900 text-white rounded-lg text-center py-2">Box 1</div>
+    </section>
+    <section class="h-screen w-full overflow-x-hidden bg-purple-500 flex justify-center items-center gap-4">
+        <div class="aos translate-x-full opacity-0 skew-x-3 transition-all duration-700 delay-100 w-44 h-44 bg-slate-900 text-white rounded-lg text-center py-2">Box 1</div>
+        <div class="aos translate-x-full opacity-0 skew-x-3 transition-all duration-700 delay-300 w-44 h-44 bg-slate-900 text-white rounded-lg text-center py-2">Box 1</div>
+        <div class="aos translate-x-full opacity-0 skew-x-3 transition-all duration-700 delay-500 w-44 h-44 bg-slate-900 text-white rounded-lg text-center py-2">Box 1</div>
+    </section>
+    <section class="h-screen w-full overflow-x-hidden bg-orange-500 grid place-items-center">
+        <div class="aos scale-x-0 opacity-0 transition-all duration-300 delay-500 w-44 h-44 bg-slate-900 text-white rounded-lg text-center py-2">Box 1</div>
+    </section>
+</body>
+</html>
